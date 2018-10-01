@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+//import styled from 'styled-components'
 import './dynamicbezier.css'
 
 class DynamicBezier extends React.Component {
@@ -81,11 +81,13 @@ class DynamicBezier extends React.Component {
 
 }
 
+/*
 const ControlLine = styled.line`
   stroke: 'rgb(200, 200, 200);
   stroke-dasharray: 5, 5;
   stroke-width: 2;
 `
+*/
 
 const ConnectingLine = ({ from, to }) => (
   <line className='DotLine' 
@@ -103,6 +105,7 @@ const ConnectingLine = ({ from, to }) => (
     x2={to.x} y2={to.y} />
 )
 */
+
 const Curve = ({ instructions }) => (
   <path
     d={instructions}
