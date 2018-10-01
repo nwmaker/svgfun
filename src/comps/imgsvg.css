@@ -1,0 +1,11 @@
+.logo {
+  height: 75px;
+  margin: 50px;
+  animation: spinning infinite 20s linear;
+}
+
+@keyframes spinning {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
