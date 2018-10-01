@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import DynamicBezier from './comps/dynamicbezier'
+import MoveRect from './interactive/moverect'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <p className="App-intro">
         </p>
         <DynamicBezier viewBoxWidth={1500} viewBoxHeight={500} />
+        <MoveRect />
       </div>
     )
   }
