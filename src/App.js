@@ -4,6 +4,7 @@ import './App.css';
 
 import DynamicBezier from './comps/dynamicbezier'
 import MoveRect from './interactive/moverect'
+import MoveCubic from './interactive/movecubic'
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         </p>
         <DynamicBezier viewBoxWidth={1500} viewBoxHeight={500} />
         <MoveRect />
+        <MoveCubic />
       </div>
     )
   }
