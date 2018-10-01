@@ -38,6 +38,7 @@ class MoveCubic extends React.Component {
           `}
           fill='transparent'
           stroke='gray'
+          stroke-dasharray='5,5'
           strokeWidth='2'
         />
         {
