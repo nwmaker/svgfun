@@ -94,7 +94,7 @@ const ConnectingLine = ({ from, to }) => (
     x1={from.x} y1={from.y}
     x2={to.x} y2={to.y}
     stroke='rgb(200, 200, 200)'
-    strokeDashArray="5,5"
+    stroke-dasharray="5,5"
     strokeWidth={2}
     />
 )
