@@ -13,7 +13,7 @@ class MoveCubic extends React.Component {
     }
   }
   render() {
-    const points = this.state.points
+    const { points } = this.state
 
     return (
       <svg viewBox='0 0 1000 1000'
@@ -59,14 +59,15 @@ class MoveCubic extends React.Component {
   }
   
   startDrag = (event, index) => {
-    event.preventDefault();
+    event.preventDefault()
     
     const mousemove = (event) => {
-      event.preventDefault();
-      let cursorPoint = this.svg.createSVGPoint();
-      cursorPoint.x = event.clientX;
-      cursorPoint.y = event.clientY;
-      cursorPoint = cursorPoint.matrixTransform(this.svg.getScreenCTM().inverse());
+      event.preventDefault()
+
+      let cursorPoint = this.svg.createSVGPoint()
+      cursorPoint.x = event.clientX
+      cursorPoint.y = event.clientY
+      cursorPoint = cursorPoint.matrixTransform(this.svg.getScreenCTM().inverse())
       this.setState({
         points: this.state.points.map(
           (p, i) => (index === i ? {
@@ -74,15 +75,15 @@ class MoveCubic extends React.Component {
             y: Math.max(Math.min(cursorPoint.y, 1000), 0)
           } : p))
       })
-    };
+    }
     
     const mouseup = (event) => {
-      document.removeEventListener("mousemove", mousemove);
-      document.removeEventListener("mouseup", mouseup);
-    };
+      document.removeEventListener("mousemove", mousemove)
+      document.removeEventListener("mouseup", mouseup)
+    }
     
-    document.addEventListener("mousemove", mousemove);
-    document.addEventListener("mouseup", mouseup);
+    document.addEventListener("mousemove", mousemove)
+    document.addEventListener("mouseup", mouseup)
   }
 }
 
