@@ -6,6 +6,8 @@ import DynamicBezier from './comps/dynamicbezier'
 import MoveRect from './interactive/moverect'
 import MoveCubic from './interactive/movecubic'
 
+import SVGPath from './pathdata/index'
+
 class App extends Component {
   render() {
     return (
@@ -16,6 +18,7 @@ class App extends Component {
         </header>
         <p className="App-intro">
         </p>
+        <SVGPath />
         <DynamicBezier viewBoxWidth={1500} viewBoxHeight={500} />
         <MoveRect />
         <MoveCubic />
